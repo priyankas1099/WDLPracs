@@ -1,4 +1,3 @@
-<!--This code is to generate all prime numbers between the two numbers-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,7 +8,7 @@
             function getPrime(){
                 let x= document.getElementById("user1").value;
                 let y= document.getElementById("user2").value;
-                for(let i=x; i<y; i++){
+                for(let i=Number(x); i<Number(y); i++){
                     let flag=0;
                     for(let j=2; j<i; j++){
                         if(i%j===0){
