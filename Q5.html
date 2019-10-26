@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BMI</title>
+        <style>
+            body{
+                position: relative;
+                top: 250px;
+                left: 450px;
+            }
+        </style>
+        <script>
+            function getBMI(){
+                let ht= document.getElementById("height").value;
+                let wt= document.getElementById("weight").value;
+                let result= wt/(ht*ht);
+                document.getElementById("BMI").value= result;
+            }
+        </script>
+    </head>
+
+    <body>
+        <label for="height">Height</label>
+        <input type="number" name="height" id="height">
+        <label for="weight">Weight</label> 
+        <input type="number" name="weight" id="weight">
+        <input type="button" value="CALCULATE" onclick="getBMI()">
+        <br> <br>
+        <label for="BMI">BMI</label>
+        <input type="number" name="BMI" id="BMI">
+    </body>
+</html>

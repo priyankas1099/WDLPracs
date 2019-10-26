@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime Number</title>
+        <style>
+        </style>
+        <script>
+            function getRndInteger(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) ) + min;
+            }
+            function getPrime(){
+                let x= document.getElementById("user1").value + 1;
+                let y= document.getElementById("user2").value - 1;
+                let num;
+                while(true){
+                    num= getRndInteger(Number(x), Number(y));
+                    let flag=0;
+                    for(let i=2; i<num; i++){
+                        if(num%i===0){
+                            flag=1;
+                            break;
+                        }
+                    }
+                    if(flag===0)
+                        break;
+                }
+                document.getElementById("prime").value= num;
+            }
+        </script>
+    </head>
+
+    <body>
+        <label for="user1">User 1</label>
+        <input type="number" name="user1" id="user1">
+        <br> <br>
+        <label for="user2">User 2</label>
+        <input type="number" name="user2" id="user2">
+        <br> <br>
+        <input type="button" value="GENERATE" onclick="getPrime()">
+        <br> <br>
+        <label for="prime">Prime Number</label>
+        <input type="number" name="prime" id="prime">
+    </body>
+</html>
