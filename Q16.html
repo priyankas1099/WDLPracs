@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color</title>
+        <style>
+        </style>
+        <script>
+            function changeColor(){
+                let x= document.getElementById("background").value;
+                let y= document.getElementById("textcolor").value;
+                document.body.style.backgroundColor= x;
+                document.getElementById("test").style.color = y;
+            }
+        </script>
+    </head>
+
+    <body>
+        <p id="test"> This is the text for testing color change.</p>
+        <label for="background">Background</label>
+        <select name="background" id="background">
+            <option value="orange">Orange</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
+        <br><br>
+        <label for="textcolor">Text Color</label>
+        <select name="textcolor" id="textcolor">
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="orange">Orange</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="cyan">Cyan</option>
+        </select>
+        <br><br>
+        <input type="button" value="CHANGE" onclick="changeColor()">
+    </body>
+</html>
