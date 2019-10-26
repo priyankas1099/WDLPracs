@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marks Form</title>
+        <style>
+        </style>
+        <script>
+            function getPercent(){
+                let m1= document.getElementById("m1").value;
+                let m2= document.getElementById("m2").value;
+                let m3= document.getElementById("m3").value;
+                let perc= (Number(m1)+ Number(m2)+ Number(m3))/300*100;
+                document.getElementById("result").value= perc;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form action="" method="POST">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" id="fname"> <br><br>
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" id="lname"> <br><br>
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail"> <br><br>
+            <label for="phone">Phone</label>
+            <input type="text" name="phone" id="phone"> <br><br>
+            <label for="m1">Marks 1</label>
+            <input type="number" name="m1" id="m1"> <br><br>
+            <label for="m2">Marks 1</label>
+            <input type="number" name="m2" id="m2"> <br><br>
+            <label for="m3">Marks 1</label>
+            <input type="number" name="m3" id="m3"> <br><br>
+            <input type="text" name="result" id="result">
+            <input type="button" value="Percentage" onclick="getPercent()">
+        </form>
+    </body>
+</html>
