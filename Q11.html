@@ -1,0 +1,30 @@
+<!--First download "jquery-3.4.1.min.js" and copy this file in the same directory where you have
+saved the codes.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery</title>
+        <style>
+        </style>
+        <script src="jquery-3.4.1.min.js">
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div p").css("background-color", "yellow");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1> ABC </h1>
+        <div>
+            <p>para-1</p>
+            <p>para-2</p>
+        </div>
+        <h1>XYZ</h1>
+        <p>para-3</p>
+        <button>OK</button>
+    </body>
+</html>
