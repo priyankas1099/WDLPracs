@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Q9.xsl"?>
+<!DOCTYPE grocery SYSTEM "Q9.dtd">
+<groceries>
+    <grocery>
+        <item>Orange</item>
+        <quantity>3</quantity>
+        <price>200</price>
+        <brand>Sunshine</brand>
+    </grocery>
+    <grocery>
+        <item>Strawberry</item>
+        <quantity>5</quantity>
+        <price>300</price>
+        <brand>National</brand>
+    </grocery>
+    <grocery>
+        <item>Tomato</item>
+        <quantity>2</quantity>
+        <price>100</price>
+        <brand>MMK</brand>
+    </grocery>
+    <grocery>
+        <item>Onion</item>
+        <quantity>8</quantity>
+        <price>1000</price>
+        <brand>Thadomal</brand>
+    </grocery>
+    <grocery>
+        <item>Butter</item>
+        <quantity>15</quantity>
+        <price>1500</price>
+        <brand>Hazard</brand>
+    </grocery>
+</groceries>
