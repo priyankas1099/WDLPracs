@@ -1,0 +1,61 @@
+<!--I've picked this code from W3Schools and can make neither head nor tail of this.
+I've made changes so as to work for us, you'll have to first save Q10.xml for this to work.
+I suggest learning this code or leaving it if you can't understand it like me.
+If you get a cross domain error on the console disable Web Security (at your risk) 
+and then run it.-->
+<!DOCTYPE html>
+<html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Get my CD collection</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "Q10.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Title</th><th>Artist</th><th>Country</th><th>Company</th><th>Price</th><th>Year</th></tr>";
+  var x = xmlDoc.getElementsByTagName("cd");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("Title")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("Artist")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+    x[i].getElementsByTagName("Country")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+    x[i].getElementsByTagName("Company")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+    x[i].getElementsByTagName("Price")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+    x[i].getElementsByTagName("Year")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+</body>
+</html>
