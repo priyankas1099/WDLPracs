@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cd SYSTEM "Q10.dtd">
+<?xml-stylesheet type="text/xsl" href="Q10.xsl"?>
+
+<collection>
+  <cd>
+    <Title>Hollywood's Bleeding</Title>
+    <Artist>Post Malone</Artist>
+    <Country>USA</Country>
+    <Company>Republic Records</Company>
+    <Price>$100</Price>
+    <Year>2019</Year>
+  </cd>
+  <cd>
+    <Title>Kids in Love</Title>
+    <Artist>Kygo</Artist>
+    <Country>Norway</Country>
+    <Company>Sony Music Entertainment</Company>
+    <Price>$90</Price>
+    <Year>2017</Year>
+  </cd>
+  <cd>
+    <Title>In a Perfect World</Title>
+    <Artist>Kodaline</Artist>
+    <Country>Ireland</Country>
+    <Company>RCA Victor</Company>
+    <Price>$80</Price>
+    <Year>2013</Year>
+  </cd>
+  <cd>
+    <Title>Trilogy</Title>
+    <Artist>The Weeknd</Artist>
+    <Country>Canada</Country>
+    <Company>Dream House</Company>
+    <Price>$20</Price>
+    <Year>2011</Year>
+  </cd>
+  <cd>
+    <Title>Tribute</Title>
+    <Artist>John Newman</Artist>
+    <Country>England</Country>
+    <Company>Ant Whiting</Company>
+    <Price>$90</Price>
+    <Year>2013</Year>
+  </cd>
+</collection>
