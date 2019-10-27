@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <style>
+        </style>
+        <script src= "jquery-3.4.1.min.js">
+        </script>
+        <script>
+            function validatePassword(){
+                let pass= document.getElementById("pass").value;
+                let reg= /^[0-9a-zA-Z]+$/;
+                if(reg.test(pass)===false)
+                    alert("Password must be alphanumeric");
+                if(pass.length<12)
+                    alert("Password must be atleast 12 characters long")
+            }
+            $(document).ready(function(){
+                $("input").hover(function(){
+                   $(this).css("background-color", "yellow"); 
+                },
+                function(){
+                    $(this).css("background-color", "white");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <form action="">
+            <h1>LOGIN FORM</h1>
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail">
+            <br><br>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass">
+            <br><br>
+            <input type="button" value="SUBMIT" onclick="validatePassword()">
+        </form>
+    </body>
+</html>
