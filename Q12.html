@@ -13,6 +13,7 @@
                 });
             });
             function validateAll(){
+                $("p").remove();
                 let reg_name= /^[A-Za-z]+$/;
                 let reg_mail= /^[^@]+@[^@]+\.[^@]+$/;
 
@@ -69,7 +70,7 @@
                     "\nPhone: "+ phone+
                     "\nMail: "+ mail);
                 }
-                $("p").remove();
+                
             }
         </script>
     </head>
