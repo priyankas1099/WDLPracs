@@ -1,0 +1,128 @@
+<!--Again use localhost to run this. You can check all the validations even without using localhost
+    and running normally.
+But the form submitted webpage won't be displayed.
+This is the only form validation problem I am going to upload since it covers everything
+and the rest are all along these lines.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign Up Form</title>
+        <style>
+        </style>
+        <script>
+            function validateName(){
+                let name= document.getElementById("name").value;
+                let reg= /^[A-Za-z]+$/; //regular expression for characters. Needn't learn, can take from net
+                if(reg.test(name)===false){
+                    alert("Name should contain only characters");
+                    return false;
+                }
+                if(name===""){
+                    alert("Name cannot be null");
+                    return false
+                }
+                return true;
+            }
+            function validateAge(){
+                let age= document.getElementById("age").value;
+                let reg= /^[0-9]*$/;
+                if(reg.test(age)===false){
+                    alert("Age can only be number");
+                    return false;
+                }
+                if(age===""){
+                    alert("Age cannot be null");
+                    return false;
+                }
+                return true;
+            }
+            function validateAddress(){
+                let add= document.getElementById("add").value;
+                if(add===""){
+                    alert("Address cannot be null");
+                    return false;
+                }
+                return true;
+            }
+            function validateMobile(){
+                let mob= document.getElementById("mobile").value;
+                if(mob.length!==10){
+                    alert("Mobile number must have 10 digits");
+                    return false;
+                }
+                if(mob===""){
+                    alert("Mobile number cannot be null");
+                    return false;
+                }
+                return true;
+            }
+            function validateUser(){
+                let user= document.getElementById("user").value;
+                let reg= /^[A-Za-z]+$/;
+                if(reg.test(user[0])===false){
+                    alert("Username must begin with a character");
+                    return false;
+                }
+                if(user===""){
+                    alert("Username cannot be null");
+                    return false;
+                }
+                return true;
+            }
+            function validatePass(){
+                let pass= document.getElementById("pass").value;
+                let reg= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; //link for regex: https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a/33292812
+                if(reg.test(pass)===false){
+                    alert("Password must contain one capital letter, one number and one special character");
+                    return false;
+                }
+                return true;
+            }
+            function validateEmail(){
+                let mail= document.getElementById("mail").value;
+                let reg= /^[^@]+@[^@]+\.[^@]+$/;
+                if(reg.test(mail)===false){
+                    alert("Email is invalid");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form action="Q17.php" onsubmit="(validateName() && validateAge() && validateAddress() && validateMobile() && validateUser() && validatePass() && validateEmail()) || event.preventDefault()">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+            <br><br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" required>
+            <br><br>
+            <label for="add">Address</label>
+            <input type="text" name="add" id="add" required>
+            <br><br>
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+            </select>
+            <br><br>
+            <label for="mobile">Mobile No</label>
+            <input type="number" name="mobile" id="mobile" required minlength="10" maxlength="10">
+            <br><br>
+            <label for="user">Username</label>
+            <input type="text" name="user" id="user" required>
+            <br><br>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required minlength="8">
+            <br><br>
+            <label for="mail">Email</label>
+            <input type="email" name="mail" id="mail" required>
+            <br><br>
+            <input type="submit" value="SUBMIT">
+        </form>
+    </body>
+</html>
