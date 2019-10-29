@@ -13,5 +13,5 @@ if ($result) {
 
 /* $mysqli = new mysqli("37.59.55.185", "siEohyonbh", "wgENd15Gec", "siEohyonbh", 3306);
 This line must contain the parametes of YOUR database. Format is: 
-mysqli("localhost","your username","your password","you db name");
+mysqli("localhost","your username","your password","you db name");*/
 ?>
