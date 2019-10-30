@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unit Converter</title>
+<style>
+.container{
+    padding: 50px;
+    margin: 100px;
+    border: black 2px solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: powderblue;
+    width: 40%;
+}
+table tr{
+    margin: 10px;
+    padding: 10px;
+}
+td{
+    margin: 10px;
+    padding: 10px;
+}
+input{
+    padding: 5px;
+    border-radius: 5px;
+}
+</style>
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputPounds").innerHTML=valNum*2.2046;
+}
+function LengthConverter(valNum) {
+  document.getElementById("outputMiles").innerHTML=valNum*0.62137;
+}
+</script>
+</head>
+<body>
+<div class="container">
+<h2>UNIT CONVERTER</h2>
+<form action="" method="POST">
+<table>
+<tr>
+<td>
+<label for="">Weight(in kg):</label>
+</td>
+<td>
+<input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</td>
+<td>Pounds: <span id="outputPounds"></span></td>
+</tr>
+<tr>
+<td>
+<label for="">Distance(in km):</label>
+</td>
+<td>
+<input id="inputKilometers" type="number" placeholder="Kilometers" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</td>
+<td>Miles: <span id="outputMiles"></span></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>

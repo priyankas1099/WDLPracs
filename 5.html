@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI Calculator</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body,html {
+    color: black;
+    display:block;
+    width:100%;
+   }
+form {
+    background-color: grey;
+    box-sizing: border-box;
+    padding: 10px;
+    width:100%;
+    max-width: 400px;
+}
+input {
+    width: 100%;
+    text-align: center;
+}
+.submit {
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    font-weight: bold;
+    width:100%;
+}
+#result {
+    border: 1px solid black;
+    padding: 2px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+h4 {
+    color: black;
+}
+</style>
+<script>
+function bmi ()
+ {
+var height = Number(document.getElementById("height").value);
+var weight = Number(document.getElementById("weight").value);
+var result = weight / (height * height);
+document.getElementById("result").innerHTML = "Your bmi score is : " + result;
+}
+</script>
+</head>
+<body>
+<form>
+<h4>BMI Calculator</h4>
+<input id="weight" type="text" placeholder="Your weight in kilograms" />
+<br />
+<br />
+<input id="height" type="text" placeholder="Your height in meters" />
+<br />
+<br />
+<input class = "submit" type="button"  value="Submit" onclick="bmi()" />
+<p id="result">Here will be your result</p>
+</form>
+</body>
+</html>

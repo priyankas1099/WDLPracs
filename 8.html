@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prime Number</title>
+        <style>
+        </style>
+        <script>
+            function getPrime(){
+                let x= document.getElementById("user1").value;
+                let y= document.getElementById("user2").value;
+                for(let i=Number(x); i<Number(y); i++){
+                    let flag=0;
+                    for(let j=2; j<i; j++){
+                        if(i%j===0){
+                            flag=1;
+                            break;
+                        }
+                    }
+                    if(flag===0){
+                        document.getElementById("prime").value += (i+", ");
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <label for="user1">User 1</label>
+        <input type="number" name="user1" id="user1">
+        <br> <br>
+        <label for="user2">User 2</label>
+        <input type="number" name="user2" id="user2">
+        <br> <br>
+        <input type="button" value="GENERATE" onclick="getPrime()">
+        <br> <br>
+        <label for="prime">Prime Number</label>
+        <textarea name="prime" id="prime" rows="5" cols="30"> </textarea>
+    </body>
+</html>
